@@ -12,9 +12,7 @@ theme:
 
   # Header and footer text
   header_text:
-  footer_text: >
-   Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
-
+  footer_text:
   # Icons
   rss: false
   email_address: thomas@ttrmw.co.uk
@@ -33,12 +31,12 @@ theme:
   stack_exchange:  # full URL
   steam:
   tumblr:
-  twitter: "twitter"
+  twitter:
   wordpress:
   youtube:
 
   # Scripts
-  google_analytics: # tracking id, e.g. "UA-000000-01"
+  google_analytics: "UA-60019884-1"
   disqus_shortname:
 
   # Localization strings
@@ -62,3 +60,7 @@ highlighter: pygments
 sass:
   sass_dir: _sass
   style: :compressed
+
+
+permalink: none
+category_dir: "/"

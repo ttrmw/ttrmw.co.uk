@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   a {
     color: $text-color;
+    font-family: $header-font;
   }
 }
 h1 {
@@ -110,6 +111,11 @@ img[align=right] {
 
 pre {
   padding: 2px;
-  background-color: #000;
-  border: 1px solid $text-color;
+  background-color: #1B1725;
+  border: 1px solid #130F1D;
+  border-radius: 3px;
+}
+
+ul#footer-contact {
+  display:none;
 }

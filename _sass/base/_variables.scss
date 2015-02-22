@@ -1,4 +1,10 @@
 // typography
+
+@font-face {
+	font-family: 'Terminus';
+	src: url('/img/TerminusTTF-4.39.ttf');
+}
+
 $font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 $font-size: 1.25em;
 $header-font: 'Terminus', mono;
@@ -17,7 +23,7 @@ $border-color: rgba(0, 0, 0, 0.1); // rgba recommended if using feature images
 // typography colors
 $text-color: #D7822A;
 $header-color: #F18700;
-$link-color: #1ABC9C;
+$link-color: #10A478;
 $selection-color: #D4D4D4; // visible when highlighting text
 
 // header colors

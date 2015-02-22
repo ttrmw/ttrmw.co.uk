@@ -2,9 +2,12 @@
 title:  "Building i3 gaps on Ubuntu"
 layout: post
 date:   2015-02-07
+categories: linux
 ---
 
-Recently I decided to check out the [i3](http://i3wm.org/) window manager. i3 is a tiling WM which provides a slick keyboard-driven workflow and heaps of configurability. This post will help you build the i3-gaps variant from source, which adds the ability to create gaps between windows.
+I've been using the [i3](http://i3wm.org/) window manager for a month or so now, and so far I've found it a great productivity boon. i3 is a tiling WM which provides a slick keyboard-driven workflow and heaps of configurability.
+
+This post will help you build the i3-gaps variant from source, which adds this ability to create gaps between windows.
 
 Out of the box, i3 doesn’t provide a means to ‘pad’ its containers with gaps as is present in, for example, [bspwm](https://github.com/baskerville/bspwm), but this is made available by the unofficial o4dev mirror.
 
@@ -15,9 +18,10 @@ I am personally a big fan of having a small delimiting space between my windows,
 The [o4dev gaps branch](https://github.com/o4dev/i3) of i3 provides a simple configuration option for gaps in i3. Sadly, unlike vanilla i3, there is no package in the Ubuntu sources for i3-gaps.
 
 
-
 ###Building i3-gaps in Ubuntu
-In order to build i3-gaps in Ubuntu, first clone the [repository](https://github.com/o4dev/i3). At this point you can run:
+In order to build i3-gaps in Ubuntu, first clone the [repository](https://github.com/o4dev/i3). It is a good idea to clone this into /usr/local/src.
+
+At this point you can run:
 
 {% highlight sh %}
 $ make && sudo make install
@@ -101,4 +105,3 @@ One caveat - to enable this option you must disable title bars, as this causes t
 {% highlight sh %}
 new_window 1pixel
 {% endhighlight %}
-
