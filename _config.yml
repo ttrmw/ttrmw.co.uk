@@ -37,7 +37,7 @@ theme:
 
   # Scripts
   google_analytics: "UA-60019884-1"
-  disqus_shortname:
+  disqus_shortname: "ttrmw"
 
   # Localization strings
   str_follow_on: "Follow on"

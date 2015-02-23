@@ -6,7 +6,7 @@
 		<h1 class="site-title">
 			<a>
 			{% comment %} nicely indenting this liquid causes an errant space :( {% endcomment %}
-				{{ site.theme.title }}{% if page.categories %}{% for category in page.categories %}/{{category }}{% endfor %}{% else if page.category %}/{{page.category }}{% endif %}$
+				{{ site.theme.title }}{% if page.categories %}{% for category in page.categories %}/{{category }}{% endfor %}{% elsif page.category %}/{{page.category }}{% endif %}$
 
 			</a>
 			{% if page.categories or page.category %}
