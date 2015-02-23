@@ -1,11 +1,11 @@
 ---
-title:  "Brightness control in i3 with intel backlight & keymapping"
+title:  "Brightness control in i3 with intel backlight & keybinding"
 layout: post
 date:   2015-02-20
 categories: linux
 ---
 
-This post details scripting brightness in Linux and keymapping the scripts in i3.
+This post details scripting brightness in Linux and keybinding the scripts in i3.
 
 In i3 in Ubuntu, I found my laptop's Fn-combinations for screen brightness control were non functional out of the box.
 
@@ -13,7 +13,7 @@ In i3 in Ubuntu, I found my laptop's Fn-combinations for screen brightness contr
 ###Scripting Screen Brightness in Linux
 The backlight is exposed to the user through /sys/class/backlight, which will contain a directory named for the graphics card's vendor, in my case this was intel_backlight.
 
-Whichever vendor the card is, the directory will contain
+Whichever vendor the card is, the directory will contain:
 
 {% highlight sh %}
 $ ls /sys/class/backlight/intel_backlight
@@ -96,7 +96,7 @@ To edit the sudo file, it is important to use the visudo editor. This checks to 
 $ sudo visudo
 {% endhighlight %}
 
-and add
+and add:
 
 {% highlight sh %}
 your_user your_machine = NOPASSWD: /path/to/script/bright_up
@@ -114,11 +114,11 @@ bindsym Mod1+1 workspace 1
 
 from the default i3 configuration.
 
-here, the second parameter 'Mod1+1' is the key combination. We will need to find the keysym(s) for our intended keybinding, for which we can use xev.
+Here, the second parameter 'Mod1+1' is the key combination. We will need to find the keysym(s) for our intended keybinding, for which we can use XEV.
 
-Xev is an application for printing the contents of events from the X server. It will create a window, and print any events that happen to that window - this will allow us to view information about specific keypresses for example.
+XEV is an application for printing the contents of events from the X server. It will create a window, and print any events that happen to that window - this will allow us to view information about specific keypresses for example.
 
-Go ahead and fire up xev
+Go ahead and fire up XEV:
 
 {% highlight sh %}
 $ xev
@@ -128,7 +128,7 @@ You should see a white window, and switching focus to this should cause some out
 
 ![xev!](/img/xev.png)
 
-When focused on xev, go ahead and fire the key combination you wish to bind to. In the originating terminal, you should see something like:
+When focused on XEV, go ahead and fire the key combination you wish to bind to. In the originating terminal, you should see something like:
 
 {% highlight sh %}
 ...
