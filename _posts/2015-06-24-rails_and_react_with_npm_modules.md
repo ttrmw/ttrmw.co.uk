@@ -93,4 +93,12 @@ Here's my package file:
 
 [Browserify Incremental](https://www.npmjs.com/package/browserify-incremental) allows for incremental rebuilds of our modules - meaning only changed files will be parsed.
 
+[Reactify](https://www.npmjs.com/package/reactify) is a Browserify plugin which provides a transformer for JSX. We need to farm this out to Browserify in order for the require() calls to be appropriately handled. 
 
+Go ahead and run:
+
+{% highlight sh %} 
+$ npm install
+{% endhighlight %} 
+
+to install these modules.
