@@ -5,18 +5,20 @@ date: 2015-07-16
 categories: code
 ---
 
-In Ruby tests, I frequently find myself stepping into a REPL when something doesn't behave as expected. With `pry` or similar, this is as simple as:
+In Ruby tests, I frequently find myself stepping into a REPL when something doesn't behave as expected. Naturally I wanted to do the same with Jest. 
+
+With `pry` or similar, this is as simple as:
 
 {% highlight ruby %}
 debugger
 {% endhighlight %}
 
-So naturally, starting out with testing React components, I quickly found I missed this functionality, so here's how I tackled it.
+When starting out with testing React components, I quickly found I missed this functionality, so here's how I tackled it.
 
 In your `package.json` file, you will probably have something like:
 
 
-{% highlight json %}
+{% highlight js %}
 //...
 "scripts": {
   "test": "node ./node_modules/jest-cli/bin.jest"
@@ -45,7 +47,7 @@ Awesome! This setup should allow you to add `debugger;` to your javascript files
 
 Now, back to `package.json`! We could probably setup an alias for this in `.bashrc`, but it would certainly be neater to add it as an npm script!
 
-{% highlight json %}
+{% highlight js %}
 //...
 "scripts": {
   //...
