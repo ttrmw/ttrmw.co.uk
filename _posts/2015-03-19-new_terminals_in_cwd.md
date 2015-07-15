@@ -12,24 +12,24 @@ xcwd prints the working directory of the currently focused window. This works to
 
 With urxvt, for example, we can specify the '-cd' option to open a new terminal in a specified directory, ie:
 
-{% highlight sh %} 
+{% highlight sh %}
 urxvt -cd 'somedir'
-{% endhighlight %} 
+{% endhighlight %}
 
-So, combined with xcwd, this becomes: 
+So, combined with xcwd, this becomes:
 
-{% highlight sh %} 
+{% highlight sh %}
 urxvt -cd '`xcwd`'
-{% endhighlight %} 
+{% endhighlight %}
 
-Where the backticks get the output from the xcwd program. This is a dynamic way to launch new terminals in the current working directory. 
+Where the backticks get the output from the xcwd program. This is a dynamic way to launch new terminals in the current working directory.
 
-We can then set up our i3 config like so: 
+We can then set up our i3 config like so:
 
-{% highlight sh %} 
+{% highlight sh %}
 bindsym $mod+Return exec urxvt -cd "`xcwd`"
-{% endhighlight %} 
+{% endhighlight %}
 
-and $mod+Return now opens new terminals in the current working directory of the focused application. 
+and $mod+Return now opens new terminals in the current working directory of the focused application.
 
 

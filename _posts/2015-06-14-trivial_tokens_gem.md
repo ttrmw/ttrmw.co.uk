@@ -79,7 +79,7 @@ or
 *= require token-input-facebook
 {% endhighlight %}
 or
-{% highlight css %} 
+{% highlight css %}
 *= require token-input-mac
 {% endhighlight %}
 depending on your needs.
@@ -101,11 +101,11 @@ So go ahead and add a tokenized_tags field to your form view:
 
 {% highlight html %}
 <!-- ... -->
-<div class="field"> 
-  <%= f.label :tokenized_tags %> 
+<div class="field">
+  <%= f.label :tokenized_tags %>
   <%= f.text_field :tokenized_tags %>
 </div>
-<!-- ... --> 
+<!-- ... -->
 {% endhighlight %}
 
-that's it! 
+that's it!
