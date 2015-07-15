@@ -231,3 +231,18 @@ Finally, we can call the `react_rails` view helper to render our components:
 {% endhighlight %}
 
 We can also use this view helper to pass props into the component, as per the [react-rails documentation](https://github.com/reactjs/react-rails#rendering--mounting).
+
+Update: Gotcha for working with Jest
+=====
+
+In this setup, React is required once (in `components.js`) for all the components. Jest tests each component in isolation, which means with this setup `React` is undefined in a testing context. 
+
+This is easy to work around, though. In your tests, when requiring `react/addons`, define `React` as a global: 
+
+{% highlight js %} 
+global.React = require('react/addons');
+{% endhighlight %} 
+
+and it will be available to both the test and component. 
+
+
