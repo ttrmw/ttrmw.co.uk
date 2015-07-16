@@ -5,7 +5,7 @@ date: 2015-07-16
 categories: code
 ---
 
-In Ruby tests, I frequently find myself stepping into a REPL when something doesn't behave as expected. Naturally I wanted to do the same with Jest. 
+In Ruby tests, I frequently find myself stepping into a REPL when something doesn't behave as expected. Naturally I wanted to do the same with Jest.
 
 With `pry` or similar, this is as simple as:
 
@@ -71,7 +71,7 @@ npm run testdbg
 or, if you wish to specify a specific test file:
 
 {% highlight sh %}
-npm run testdbg -- TestFile.js
+npm run testdbg --TestFile.js
 {% endhighlight %}
 
 If you're coming from `Pry` and the like, you'll find node debug works as you'd expect, with `c` and `s` providing continue and step functionality, however if you need an interactive prompt in the current context, you must enter `repl`.
